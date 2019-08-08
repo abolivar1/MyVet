@@ -23,5 +23,9 @@ namespace MyVet.Web.Data.Entities
         public DateTime Date { get; set; }
 
         public string Remarks { get; set; }
+
+        [Display(Name = "Date")]
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}")]
+        public DateTime DateLocal => Date.ToLocalTime();
     }
 }
